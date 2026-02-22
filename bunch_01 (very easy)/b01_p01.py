@@ -1,7 +1,7 @@
 #Характеристики персонажа
 #Создай словарь с характеристиками героя (имя, HP, урон, броня). Выведи каждую характеристику в читаемом формате.
 
-def determineHero(name, hp, damage, armor):
+def determine_hero(name, hp, damage, armor):
     return {
         "name": name,
         "hp": hp,
@@ -10,17 +10,16 @@ def determineHero(name, hp, damage, armor):
     }
 
 def main():
-    newHero = determineHero('Stellarsson', 100, 20, 10)
-    printHorizontal(newHero)
+    newHero = determine_hero('Stellarsson', 100, 20, 10)
+    print_horizontal(newHero)
 
-def printVertical(dict):
-    for key, value in dict.items():
+def print_vertical(data):
+    for key, value in data.items():
         print(f"{key}: {value}")
 
-def printHorizontal(dict):
-    for key, value in dict.items():
-        print(f"{key}: {value}", end=' | ')
-    print()
+def print_horizontal(data):
+    parts = [f"{key}: {value}" for key, value in data.items()]
+    print(" | ".join(parts))
 
 if __name__ == "__main__":
     main()
