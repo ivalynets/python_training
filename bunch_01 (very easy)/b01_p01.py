@@ -10,8 +10,8 @@ def determine_hero(name, hp, damage, armor):
     }
 
 def main():
-    newHero = determine_hero('Stellarsson', 100, 20, 10)
-    print_horizontal(newHero)
+    new_hero = determine_hero('Stellarsson', 100, 20, 10)
+    print_horizontal(new_hero)
 
 def print_vertical(data):
     for key, value in data.items():
